@@ -1,0 +1,18 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - heading "GSTGuru — Notice Reply Drafter" [level=1] [ref=e4]
+      - paragraph [ref=e5]: Upload a GST notice PDF, watch the reply stream in, then edit and download.
+    - generic [ref=e6]:
+      - heading "Upload GST notice" [level=2] [ref=e7]
+      - button "Choose File" [ref=e9]
+      - 'textbox "Optional: GSTIN, period, turnover, your side of facts…" [ref=e10]'
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - heading "Reply" [level=2] [ref=e13]
+        - generic [ref=e14]:
+          - button "Download .docx" [disabled] [ref=e15]
+          - button "Print / PDF" [disabled] [ref=e16]
+      - generic [ref=e17]: Loading editor…
+      - paragraph [ref=e18]: Drafts autosave locally. AI output is a starting point — have a tax professional review before filing.
+  - button "Open Next.js Dev Tools" [ref=e24] [cursor=pointer]

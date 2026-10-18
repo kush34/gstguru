@@ -24,3 +24,61 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Editor is always a light surface, even in dark mode */
+#print-area {
+  background: #fff;
+  color-scheme: light;
+}
+#print-area .tiptap {
+  color: #18181b;
+  background: #fff;
+}
+#print-area .tiptap :is(h1, h2, h3, p, li, td, th) {
+  color: #18181b;
+}
+/* Minimal document styling (no typography plugin) */
+#print-area .tiptap h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+}
+#print-area .tiptap h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.9rem 0 0.4rem;
+}
+#print-area .tiptap p {
+  margin: 0.4rem 0;
+}
+#print-area .tiptap ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0.4rem 0;
+}
+#print-area .tiptap ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin: 0.4rem 0;
+}
+#print-area .tiptap hr {
+  margin: 1rem 0;
+  border-color: #d4d4d8;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+  #print-area {
+    border: none !important;
+    /* Print the whole reply, not just the scrolled viewport */
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
